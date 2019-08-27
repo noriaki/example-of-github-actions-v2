@@ -17,6 +17,10 @@ jobs:
     needs: hello_world
 
     steps:
+      - name: Hello World in steps
+        id: hello_world_in_steps
+        run: echo 'Hello World in steps!'
+
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
